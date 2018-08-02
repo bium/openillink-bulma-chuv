@@ -1,0 +1,130 @@
+/*!
+Bulma-based OpenILLink CHUV theme.
+Copyright (C) 2018 CHUV.
+*/
+
+@import "../sass/utilities/initial-variables";
+@import "../sass/utilities/functions";
+
+
+$chuv-green: #093;
+$chuv-green-invert: findColorInvert($chuv-green);
+$chuv-grey: #ededed;
+
+
+$primary: $chuv-green;
+$info: $turquoise;
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700);
+@font-face {
+    font-family: NeoSansStd;
+    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.eot');
+    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.eot?#iefix') format('embedded-opentype'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.woff2') format('woff2'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.woff') format('woff'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.ttf') format('truetype');
+    font-weight: 400
+}
+
+@font-face {
+    font-family: NeoSansStd;
+    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.eot');
+    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.eot?#iefix') format('embedded-opentype'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.woff2') format('woff2'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.woff') format('woff'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.ttf') format('truetype');
+    font-weight: 500
+}
+
+@font-face {
+    font-family: NeoSansStd;
+    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.eot');
+    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.eot?#iefix') format('embedded-opentype'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.woff2') format('woff2'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.woff') format('woff'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.ttf') format('truetype');
+    font-weight: 700
+}
+
+
+$family-sans-serif: Merriweather,serif;
+$message-body-border-color: #d3d6db;
+$message-header-body-border-width: 0px 1px 1px 1px;
+$message-body-border-width: 1px;
+$message-header-background-color: #69707a;
+$message-header-weight: $weight-normal;
+$message-header-padding: 0.5em 1em;
+
+$body-size: 14px;
+
+$radius: 3px;
+$input-border-color: #d3d6db;
+
+$link-focus-border: $primary; //test;
+$link: $chuv-green; //test;#369;
+$pagination-focus-border-color: $primary;
+$pagination-current-background-color: $primary;
+$pagination-current-border-color: $primary;
+
+$table-row-hover-background-color: $grey-lighter;
+$table-striped-row-even-hover-background-color: $grey-light;
+
+$navbar-background-color: $chuv-green;
+$navbar-item-color: rgba(255,255,255,.5);
+$navbar-tab-hover-background-color: $chuv-grey;
+$navbar-item-hover-background-color: $chuv-grey;
+$navbar-item-hover-color: $black;
+$navbar-tab-hover-border-bottom-color: $white;
+$navbar-tab-active-color: $white;
+$navbar-tab-active-border-bottom-color: $white;
+$navbar-dropdown-arrow: rgba(255,255,255,.5);
+$navbar-dropdown-item-active-color: $white;
+$navbar-dropdown-background-color: $chuv-grey;
+$navbar-dropdown-item-hover-color: $chuv-green;
+$navbar-dropdown-item-hover-background-color: $chuv-grey;
+$navbar-dropdown-item-active-background-color: $chuv-grey;
+
+$message-header-background-color: $chuv-green;
+
+@import "../sass/utilities/derived-variables";
+$addColors: (
+  "chuv":($chuv-green, $chuv-green-invert),
+);
+$colors: map-merge($colors, $addColors);
+
+
+@import "../bulma";
+
+// Special overrides
+
+.title, .navbar-item, .message-header {
+    font-family: NeoSansStd,Arial,sans-serif;
+}
+
+.navbar-item.is-tab.is-active, navbar-link.is-active, navbar-link.is-active:not(:hover), .navbar-link.is-active:not(:hover) {
+    font-weight: $weight-bold;
+    color: $white;
+}
+.navbar-dropdown .navbar-item, .navbar-dropdown .navbar-link{
+    color: $black;
+}
+
+.navbar-link:not(.is-arrowless):hover::after {
+    border-color: $black;
+}
+.navbar-brand .title {
+    color: $white;
+    background-image: url(https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/images/chuv.png);
+    background-repeat: no-repeat;
+    padding-left: 90px;
+    background-size: auto 40px;
+    height: 40px;
+    line-height: 2.5rem;
+}
+.message-header {
+    font-weight:700;
+}
+
+.navbar-item .button.is-primary, .message-header .button.is-primary{
+    border-color: $white
+}
+.navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link{
+    color: $black;
+}
+navbar-link.is-active:hover, .navbar-link.is-active:hover{
+    font-weight: $weight-bold;
+}
+.navbar-item.has-dropdown .navbar-item.is-active{
+    color: $chuv-green;
+}
