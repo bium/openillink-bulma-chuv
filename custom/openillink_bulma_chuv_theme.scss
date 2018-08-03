@@ -128,3 +128,8 @@ navbar-link.is-active:hover, .navbar-link.is-active:hover{
 .navbar-item.has-dropdown .navbar-item.is-active{
     color: $chuv-green;
 }
+#bibliotheque {
+    // Attributed library select too wide
+    font-size:0.9em;
+    height:2.6em;
+}
