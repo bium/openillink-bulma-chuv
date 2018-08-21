@@ -16,26 +16,7 @@ $primary: $chuv-green;
 $info: $turquoise;
 
 @import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700);
-@font-face {
-    font-family: NeoSansStd;
-    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.eot');
-    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.eot?#iefix') format('embedded-opentype'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.woff2') format('woff2'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.woff') format('woff'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_0_0.ttf') format('truetype');
-    font-weight: 400
-}
-
-@font-face {
-    font-family: NeoSansStd;
-    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.eot');
-    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.eot?#iefix') format('embedded-opentype'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.woff2') format('woff2'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.woff') format('woff'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_1_0.ttf') format('truetype');
-    font-weight: 500
-}
-
-@font-face {
-    font-family: NeoSansStd;
-    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.eot');
-    src: url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.eot?#iefix') format('embedded-opentype'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.woff2') format('woff2'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.woff') format('woff'),url('https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/fonts/MyFont-NeoSansStd/webfonts/34351F_2_0.ttf') format('truetype');
-    font-weight: 700
-}
+@import url(https://fonts.googleapis.com/css?family=Exo:400,500,700);
 
 
 $family-sans-serif: Merriweather,serif;
@@ -89,7 +70,7 @@ $colors: map-merge($colors, $addColors);
 // Special overrides
 
 .title, .navbar-item, .message-header {
-    font-family: NeoSansStd,Arial,sans-serif;
+    font-family: Exo,Arial,sans-serif;
 }
 
 .navbar-item.is-tab.is-active, navbar-link.is-active, navbar-link.is-active:not(:hover), .navbar-link.is-active:not(:hover) {
