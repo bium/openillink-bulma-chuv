@@ -114,3 +114,10 @@ navbar-link.is-active:hover, .navbar-link.is-active:hover{
     font-size:0.9em;
     height:2.6em;
 }
+
+.ordersList a, .box a {
+    color: #118e8f;
+}
+.ordersList a:hover, .box a:hover {
+    color: $primary;
+}
