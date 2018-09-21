@@ -6,7 +6,6 @@ Copyright (C) 2018 CHUV.
 @import "../sass/utilities/initial-variables";
 @import "../sass/utilities/functions";
 
-
 $chuv-green: #093;
 $chuv-green-invert: findColorInvert($chuv-green);
 $chuv-grey: #ededed;
@@ -64,7 +63,7 @@ $addColors: (
 );
 $colors: map-merge($colors, $addColors);
 
-
+@import "openillink_base"; // necessary to style custom OpenIllink elements
 @import "../bulma";
 
 // Special overrides
@@ -92,6 +91,11 @@ $colors: map-merge($colors, $addColors);
     background-size: auto 40px;
     height: 40px;
     line-height: 2.5rem;
+}
+@media screen and (min-width: 1088px) {
+    .navbar > .container .navbar-brand,.container > .navbar .navbar-brand {
+    margin-left: -6.75rem;
+    }
 }
 .message-header {
     font-weight:700;

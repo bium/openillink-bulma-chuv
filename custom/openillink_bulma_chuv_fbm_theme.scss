@@ -58,13 +58,20 @@ $navbar-dropdown-item-active-background-color: $chuv-fbm-grey;
 
 $message-header-background-color: $chuv-fbm-green;
 
+$footer-background-color: $chuv-fbm-grey;
+
+$openillink-badge-color: $primary;
+$openillink-badge-border-color: inherit;
+$openillink-badge-border-width: 1px;
+$openillink-badge-text-color: inherit;
+
 @import "../sass/utilities/derived-variables";
 $addColors: (
   "chuv-fbm":($chuv-fbm-green, $chuv-fbm-green-invert),
 );
 $colors: map-merge($colors, $addColors);
 
-
+@import "openillink_base"; // necessary to style custom OpenIllink elements
 @import "../bulma";
 
 // Special overrides
@@ -80,7 +87,15 @@ $colors: map-merge($colors, $addColors);
 .navbar-dropdown .navbar-item, .navbar-dropdown .navbar-link{
     color: $black;
 }
-
+.navbar-item:hover .openillink-badge, .is-active .openillink-badge {
+    color: $white !important;
+    border-color: $white!important;
+}
+.navbar-item.has-dropdown > .navbar-link.is-active {
+    border-bottom-color: $navbar-tab-active-color;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
 .navbar-link:not(.is-arrowless):hover::after {
     border-color: $black;
 }
@@ -92,6 +107,11 @@ $colors: map-merge($colors, $addColors);
     background-size: auto 40px;
     height: 40px;
     line-height: 2.5rem;
+}
+@media screen and (min-width: 1088px) {
+    .navbar > .container .navbar-brand,.container > .navbar .navbar-brand {
+    margin-left: -6.75rem;
+    }
 }
 .message-header {
     font-weight:700;
