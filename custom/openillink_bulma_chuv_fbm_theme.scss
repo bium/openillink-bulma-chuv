@@ -71,6 +71,12 @@ $addColors: (
 );
 $colors: map-merge($colors, $addColors);
 
+@media print {
+    /* Do not display links menu when printing order details page */
+    #illinks {display:none;}
+    footer.footer {display:none;}
+}
+
 @import "openillink_base"; // necessary to style custom OpenIllink elements
 @import "../bulma";
 
