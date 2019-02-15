@@ -1,6 +1,6 @@
 /*!
 Bulma-based OpenILLink CHUV theme.
-Copyright (C) 2018 CHUV.
+Copyright (C) 2018, 2019 CHUV.
 */
 
 @import "../sass/utilities/initial-variables";
@@ -123,4 +123,22 @@ navbar-link.is-active:hover, .navbar-link.is-active:hover{
     // Attributed library select too wide
     font-size:0.9em;
     height:2.6em;
+}
+.ordersList a, .box a {
+    color: #118e8f;
+}
+.ordersList a:hover, .box a:hover {
+    color: $primary;
+}
+
+// cookie consent
+.cc-btn {
+    border-color: $white;
+    border-width: 1px;
+}
+
+/* Overriding some Select2 styles */
+.select2-container--default .select2-selection--single {
+  border: 1px solid $border;
+  box-shadow: $input-shadow
 }

@@ -153,3 +153,9 @@ navbar-link.is-active:hover, .navbar-link.is-active:hover{
     border-color: $white;
     border-width: 1px;
 }
+
+/* Overriding some Select2 styles */
+.select2-container--default .select2-selection--single {
+  border: 1px solid $border;
+  box-shadow: $input-shadow
+}
