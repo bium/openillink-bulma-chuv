@@ -1,6 +1,6 @@
 /*!
 Bulma-based OpenILLink CHUV/FBM theme.
-Copyright (C) 2018 CHUV.
+Copyright (C) 2018, 2019 CHUV.
 */
 
 @import "../sass/utilities/initial-variables";
@@ -146,4 +146,10 @@ navbar-link.is-active:hover, .navbar-link.is-active:hover{
 }
 .ordersList a:hover, .box a:hover {
     color: $primary;
+}
+
+// cookie consent
+.cc-btn {
+    border-color: $white;
+    border-width: 1px;
 }
