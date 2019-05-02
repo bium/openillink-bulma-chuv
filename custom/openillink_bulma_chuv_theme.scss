@@ -91,7 +91,7 @@ $colors: map-merge($colors, $addColors);
 }
 .navbar-brand .title {
     color: $white;
-    background-image: url(https://www.chuv.ch/typo3conf/ext/site_package/Resources/Public/Patternlab/images/chuv.png);
+    background-image: url(../img/chuv.png);
     background-repeat: no-repeat;
     padding-left: 90px;
     background-size: auto 40px;
